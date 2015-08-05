@@ -1,57 +1,295 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>School-of-data-www by BetaNYC</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <meta charset="utf-8">
+    <title>BetaNYC | A Code for America Brigade for New York City</title>
+    <meta name="description" content="BetaNYC is building a connected New York City by the people, for the people, for 21st Century. We are NYC’s civic technology and open government vanguard. Since 2009, we have worked with elected officials to engage NYC’s technology community. We have helped pass transformative open government legislation, and have supported NYC’s civic oriented startups. ">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Tracking -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45782966-1', 'betanyc.us');
+  ga('send', 'pageview');
+
+</script>
+    
+<!-- end Google -->
+
+<!--Twitter Tracking Code Start -->
+<meta property="twitter:account_id" content="46654180" />
+<!--Twitter Tracking Code End -->
   </head>
+
   <body>
-    <section class="page-header">
-      <h1 class="project-name">School-of-data-www</h1>
-      <h2 class="project-tagline">This is the school of data community survey.</h2>
-      <a href="https://github.com/BetaNYC/School-of-data-www" class="btn">View on GitHub</a>
-      <a href="https://github.com/BetaNYC/School-of-data-www/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/BetaNYC/School-of-data-www/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
 
-    <section class="main-content">
-      <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub for Mac or GitHub for Windows, simply sync your repository and you’ll see the new branch.</p>
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar. Include responsive CSS to utilize. -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a href = "http://beta.nyc"><div class = "betaLogo"></div></a>
+            <!--a class="brand" href="#">BetaNYC</a>-->
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                
+                <li><a href="http://meetup.com/betanyc" target="_blank">Events</a></li>
+                
+                <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
+                <li class="dropdown" id="menu1">
+                  <a href="#menu1" class="dropdown-toggle" data-toggle="dropdown">
+                    Discussion Groups
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="http://eepurl.com/bdi7hn" target="_blank">
+                      <i class=icon-bullhorn icon-white></i> Weekly Newsletter</a>
+                    </li>                                      
+                     <li>
+                      <a href="https://talk.beta.nyc/c/general-discussion" target="_blank">
+                        <i class=icon-comment icon-white>></i> General Discussion Forum</a>
+                    </li>
+                    <li>
+                      <a href="https://talk.beta.nyc/c/working-groups/devs-corner" target="_blank">
+                        <i class=icon-comment icon-white></i> Developers Corner</a>
+                    </li>
+                    <li>
+                      <a href="https://talk.beta.nyc/c/working-groups/open-data" target="_blank">
+                        <i class=icon-comment icon-white></i> Open Data Workgroup</a>
+                    </li>
+                    <li>
+                      <a href="https://talk.beta.nyc/c/working-groups/city-record-online" target="_blank">
+                        <i class=icon-comment icon-white></i> City Record Workgroup</a>
+                    </li>
+					<li class="divider"></li>
+                    <li>
+                      <a href="http://facebook.com/groups/betanyc" target="_blank">
+                       <i class=icon-comment icon-white></i> Facebook Discussion Group</a>
+                      </li>
+                    <li>
+                      <a href="http://bit.ly/bikenyc-hacker" target="_blank">
+                       <i class=icon-comment icon-white></i> Citibike / #BikeNYC Discussion List</a>
+                      </li>
+                    <li class="divider"></li>
+                      
+                  </ul>
+                </li>
+                
+                <li><a href="http://projects.betanyc.us" target="_blank">Projects</a></li>
+                
+                <li><a href="http://data.beta.nyc" target="_blank">Community Data</a></li>
+                
+                <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
+                <li class="dropdown" id="menu2">
+                  <a href="#menu2" class="dropdown-toggle" data-toggle="dropdown">
+                    Resources
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                <li><a href="http://blog.betanyc.org" target="_blank">Blog</a></li>                  
+                <li><a href="http://betanyc.us/#contact">Contact</a></li>
+                <li><a href="https://www.youtube.com/user/betanyc" target="_blank">Videos</a></li>
+                <li><a href="https://www.facebook.com/BetaNYC" target="_blank">Facebook Page</a></li>
+                <li><a href="https://twitter.com/betanyc" target="_blank">Twitter</a></li>
+                <li><a href="https://github.com/betanyc" target="_blank">
+                        <i class=icon-wrench icon-white></i> Code on GitHub</a></li>
+                    <li>
+                      <a href="https://github.com/BetaNYC/What-is-BetaNYC/blob/master/Code-of-Conduct.md" target="_blank">
+                      <i class=icon-thumbs-up icon-white></i>
+                      Our Code of Conduct</a>
+                    </li>
+                    <li class="divider"></li>
+                      
+                  </ul>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
 
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating pages manually</h3>
+    <!-- Carousel - but not using at the moment
+    ================================================== -->
+    <div class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          
+          <div class="container">
+            <div class="carousel-caption">
+              <p> <h1>BetaNYC is building a connected NYC by the people, for the people, for 21st Century.</h1> </p> 
+              <p class="lead">
+              We are NYC’s civic technology and open government vanguard. We are an organizing force for local civic engagement - a network of civic-minded volunteers who contribute their skills toward government and community service.
+              </p>
+<a class="btn btn-large btn-primary" href="http://www.meetup.com/betaNYC/" target="_blank">Join us</a> 
+<a class="btn btn-large btn-primary" href="https://talk.beta.nyc/" target="_blank">Ask us a question</a>
+<a class="btn btn-large btn-primary" href="http://projects.betaNYC.us/" target="_blank">Join a project</a>
+<a class="btn btn-large btn-primary" href="http://data.beta.nyc/" target="_blank">Get data</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.carousel -->
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+    <div class="container marketing">
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/BetaNYC/School-of-data-www">School-of-data-www</a> is maintained by <a href="https://github.com/BetaNYC">BetaNYC</a>.</span>
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span4">
+          <img src="images/captain.png" style = "height:70px">
+          <h2>Gatherings</h2>
+          <p>We host events to demystify open data and give you an opportunity to connect to your neighbors. Join us on <a href="http://www.meetup.com/betanyc/" target="_blank">meetup</a>.</p>
+        </div><!-- /.span4 -->
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+        <div class="span4">
+          <img src="images/community.png" style="height:70px">
+          <h2>Online Discussions</h2>
+          <p>We host open conversations on <a href="https://talk.beta.nyc" target="_blank">our forum</a> and <a href="http://facebook.com/groups/betanyc" target="_blank">facebook.com</a>.</p>
+        </div><!-- /.span4 -->
+
+        <div class="span4">
+          <div class="logoGray"></div>
+          <h2>Purpose</h2>
+          <p>The purpose of <a href="http://blog.betanyc.org" target="_blank">BetaNYC</a> is to build a community who sustains a thriving local civic technology ecosystem. Join our discussion groups or read <a href="http://blog.betanyc.org" target="_blank">our blog</a>. 
+          </p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+ <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" style="padding-bottom: 75px" src="images/noun_project_756_citizen.png">
+        <h2 class="featurette-heading">Some of our Projects.<br/><span class="muted"></span></h2>
+        <p class="lead">
+        BetaNYC's projects and tools grow from the community. We use our meetings as an opportunity to learn about datasets, opportunities to improve policy or legislation, and troubleshoot issues. We have a growing list of projects at <a href="http://projects.betanyc.us" target="_blank">projects.betanyc.us</a>. Here are some of our better known projects.
+          <ul class="lead">
+<!--            <li>
+<a href="">[PROJECT NAME]</a> (<a href="">GitHub</a>), [ABOUT THE PROJECT]. Read its  <a href="" target="_blank">origin story</a>.</li> -->
+<li>
+<a href="https://www.citygram.nyc/">CityGram NYC</a> (<a href="https://github.com/BetaNYC/citygram-nyc">GitHub</a>), Citygram is a geographic notification platform designed to work with open government data. It allows residents to designate area(s) of a city they are interested in and subscribe to one or more topics. </li>
+            <li>
+             <a href="http://nycroadmap.us" target="_blank">The People’s Roadmap to a Digital New York City</a> (<a href="https://docs.google.com/document/d/1_hN-syKJPIfPicXfuhIlcf55SrbwJLM0rTkLrmx-Be4/edit?usp=sharing">Google Doc</a> or <a href="https://github.com/BetaNYC/peoples-roadmap-nyc" target="_blank">GitHub</a>) here you will find values and recommendations formulated by people of New York, for the people of New York, for the 21st Century. Through our roadmap, we look at technology as a catalyst for empowerment and bridging inequalities.</li>
+<li>
+<a href="http://heatseeknyc.com/">Heat Seek NYC</a> (<a href="https://github.com/heatseeknyc">GitHub</a>), At Heat Seek NYC, we’re tapping the internet of things to empower tenants, landlords, community organizations, and the justice system to tackle our city’s heating crisis.</li>
+            <li>
+<a href="http://nyctaxmap.herokuapp.com">NYC Property Tax Map</a> (<a href="https://github.com/chriswhong/taxMap">GitHub</a>),  allows you to visually explore NYC property tax bills at the taxlot level. Zoom in on an area, hover over a property for basic info, and click on a property for full info and a link to its latest tax bill.</li>
+            <li>
+<a href="http://www.askthem.io">AskThem</a> (<a href="https://github.com/opengovernment/askthem" target="_blank">GitHub</a>), a tool to monitor and interact with local governments in the United States. This is similar to WhiteHouse.gov's "We the People"</li>
+            <li>
+<a href="http://dangerousroadsnyc.com/ ">Dangerous Roads NYC</a> (<a href="https://github.com/DangerousRDNYC/DangerousRDNYC" target="_blank">GitHub</a>), an online resource for finding the top bike, car, and pedestrian injuries or fatalities along a route or within a specified area in NYC.</li>
+            <li>
+             <a href="https://github.com/talos/nypd-crash-data-bandaid">NYC Crash Bandaid</a> before the NYPD started producing machine readable crash data, the community had to scrape it. This is the code that continues to verify that the NYPD's data is accurate.</li>
+            <li>
+             <a href="https://github.com/BetaNYC/civic.json">Civic JSON</a> is a metadata standard for civic technology projects that is intended to complement project information in a github repository.</li>
+			<li>
+             Bike Share Best Practices
+              (<a href="https://github.com/BetaNYC/Bike-Share-Data-Best-Practices/wiki">Wiki</a>) is a collection of bike share data best practices. This wiki was used to inform CitiBike NYC on their data release.</li>
+            <li>
+             While our history starts at meetup, our name grows from NYC.gov's first hackathon. Check out our ReinventNYC.gov Hackathon submission.
+              (<a href="http://betanyc.github.io/ReinventNYC.gov/">URL to Demo</a>)
+              (<a href="https://github.com/BetaNYC/ReinventNYC.gov">URL to Code</a>)</li>
+          </ul>
+        </p>
+      </div>
+
+  <hr class="featurette-divider">
+
+      <div class="featurette">
+        <a href="http://brigade.codeforamerica.org/" target="_blank">
+          <img name="cfa" id="cfa" class="featurette-image pull-right" src="images/cfa_brigade_logo.png">
+        </a>
+        <h2 class="featurette-heading">Let us build a connected New York City by the people, for the people, for 21st Century. <span class="muted"></span></h2>
+        <p class="lead">BetaNYC is building a connected New York City by the people, for the people, for 21st Century.<br/><br/>
+         Since 2009, we have worked with New York City government, elected officials, community boards, and community groups to engage NYC’s "civic-minded" technology and design community. We have helped pass transformative open government legislation, supported NYC’s civic oriented startups, and built a dedicated community who believes in the power of neighbors helping neighbors. We do this though advocacy and events that demystify open data, technology, and government.<br/><br/>
+        We are NYC’s civic technology and open government vanguard. BetaNYC is fiscally sponsored not-for-profit and an organizing force for local civic engagement. We are a network of civic-minded volunteers who contribute their skills toward safe spaces, digital platforms, and local empowerment.<br/><br/>
+        Our story can be told through two videos. First, you can learn about our history though <a href="https://www.youtube.com/watch?v=YNYe3dsFh10" target="_blank">"Made In NYC: Civic Hacking 102,"</a> and you can see the change we are making via <a href="https://www.youtube.com/watch?v=6BTg8OXhEZk" target="_blank">iQuantNY's TEDx.</a><br/><br/>
+        BetaNYC's work has been featured in the <a href="http://www.nytimes.com/2013/03/24/nyregion/mayor-bloombergs-geek-squad.html?pagewanted=2&pagewanted=all" target="_blank">New York Times</a>, <a href="http://www.bloomberg.com/news/2013-11-06/new-york-nerds-sift-citi-bike-data-to-solve-rebalancing-riddle.html" target="_blank">Bloomberg</a>, <a href="http://www.theatlanticcities.com/hubs/search/?q=betaNYC" target="_blank">Atlantic Cities</a>, <a href="http://live.huffingtonpost.com/r/segment/making-governments-work-better-through-tech/521cf1a22b8c2a34ef0000ff" target="_blank">Huffington Post Live</a>, <a href="http://techpresident.com/search/node/betanyc" target="_blank">TechPresident</a>, <a href="http://pando.com/2014/02/24/new-york-hackathon-looks-to-use-open-data-to-assist-with-city-governance/" target="_blank">PandoDaily</a>, <a href="http://www.streetsblog.org/2013/10/10/nypd-public-too-stupid-to-understand-a-citywide-crash-map/" target="_blank">Streetsblog</a>, and <a href="http://media.cityandstateny.com/2/75/new-york-city/nypd-promises-more-transparency-on-trafficstat.html" target="_blank">City & State</a>.<br/><br/>
+        We are inaugural members of the <a href="http://nyctwg.org" target="_blank">NYC Transparency Working Group</a>, a collection of NYC's good government groups who support efforts to use information technology to make New York City government more open and accountable, and to get the greatest public value from the city's wealth of digital information.<br/><br/>
+        We are members of <a href="http://brigade.codeforamerica.org/">Code for America's Brigade</a>, which means we are members of a global volunteer network that contributes its talents toward improving local governments and community organizations to better use information technology.<br/><br/>
+        Check out what <a href="http://brigade.codeforamerica.org/pages/activities" target="_blank">brigades do</a>, or the <a href="http://codeforamerica.org/2012/03/08/jennifer-pahlka-at-ted-video/" target="_blank"> inspirational TED talk given by Jennifer Pahlka, the founder of Code for America.</a></p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <a href="http://www.meetup.com/betanyc/" target="_blank">
+          <img name="meetup" id="meetup" class="featurette-image pull-left" src="images/meetup.jpg">
+          </a>
+        <h2 class="featurette-heading">Join Us.<span class="muted">We Meet Often.</span></h2>
+        <p class="lead">We try to meet every week to hack (develop), yack (discuss), and map (plan) our projects. We use this time to brainstorm on current issues and activities in and around NYC. Most all of our events are posted on our <a href="http://www.meetup.com/betanyc/" target="_blank"> Meetup.com site</a>.<br/><br/>
+        We are an open and safe community. All of BetaNYC's events and online discussion spaces are governed by our <a href="https://github.com/BetaNYC/What-is-BetaNYC/blob/master/Code-of-Conduct.md" target="_blank">Code of Conduct and Anti-Harassment policy</a>.</p>
+        
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <a href="http://www.meetup.com/betanyc/messages/archive/" target="_blank">
+          <img name="groups" id="groups" class="featurette-image pull-right" src="images/google_groups.png">
+        </a>
+        <h2 class="featurette-heading">We Discuss Things Online. <span class="muted">Join and Introduce Yourself.</span></h2>
+        <p class="lead">Can't make it to an event? No problem. We collaborate on projects, ask for help, and post wins to our weekly <a href="http://eepurl.com/bdi7hn" target="_blank">newsletter</a>, <a href="http://www.meetup.com/betanyc/messages/archive/">meetup</a>, <a href="http://facebook.com/groups/betanyc" target="_blank">Facebook</a>, or <a href="http://bit.ly/betanyc-dev" target="_blank">our developer list</a>, or <a href="http://bit.ly/bikenyc-hacker" target="_blank">@citibikeNYC / #BikeNYC hacker group</a>. Connect and make NYC better. <br/><br/>
+        We are an open and safe community. All of BetaNYC's events and online discussion spaces are governed by our <a href="https://github.com/BetaNYC/What-is-BetaNYC/blob/master/Code-of-Conduct.md" target="_blank">Code of Conduct and Anti-Harassment policy</a>.</p>
+        
+          
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img name="contact" id="contact" class="featurette-image pull-right" src="">
+        <h2 class="featurette-heading">Want Even More Info? <span class="muted">Contact Us.</span></h2>
+        <p class="lead">You can follow us on twitter at <a href="http://twitter.com/betanyc" target="_blank">@BetaNYC</a>. BetaNYC is led by <a href="mailto:noel(**at**)beta.NYC">Noel Hidalgo</a>, aka <a href="https://twitter.com/noneck">@noneck</a>, and co-organized with Benjamin Arancibia, Emily Goldman, Hayley Richardson, Kara Chesal, Lauren Rennee, Lucio Tolentino, Terrance Beckett, Volkan Unsal, and Yasi Razvan. We want to hear from you! <a href="mailto:leadership(**at**)beta.NYC">Contact us.</a></p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p> BetaNYC started off as the "NYC Open Government" meetup. In 2009, was renamed to "Open NY Forum" and was co-founded by Philip Ashlock and Hailey Austin Cooperrider. In 2013 and after the NY Governor launched the State's Open Government initiative, aka Open NY, the group renamed to BetaNYC.</p>
+<p>This code was build by <a href="http://codeforhamptonroads.org" target="_blank">Code for Hampton Roads</a> and is maintained by <a href="https://github.com/betanyc" target="_blank">BetaNYC</a>. Site Design Based on <a href="http://twitter.github.com/bootstrap">Bootstrap</a>, Some Images Provided by <a href="http://thenounproject.com">The Noun Project</a> and <a href = "http://www.flickr.com/photos/namoscato/">Nick Amoscato</a>. <a href="https://plus.google.com/101061014438134221429" rel="publisher">find us on Google+</a></p>
+
       </footer>
 
-    </section>
+    </div><!-- /.container -->
 
-  
+
   </body>
 </html>
